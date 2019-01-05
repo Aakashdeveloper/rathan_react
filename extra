@@ -1,0 +1,28 @@
+functional              ClassBase
+light                   heavy
+less functional         more functional
+stateless               Stateful
+
+
+State=> Local variable
+Props=> use to tranport
+
+
+                    props
+A                   =>>>>>>>>>>>B
+let a = 10                      let b = ''
+
+
+
+////
+npm init
+npm install react --save
+
+CLI
+
+sudo npm install -g create-react-app
+create-react-app firstapp
+cd firstapp
+npm start
+
+npm install gitignore
