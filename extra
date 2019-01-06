@@ -26,3 +26,17 @@ cd firstapp
 npm start
 
 npm install gitignore
+
+
+function add(a,b){
+    return a+b
+}
+
+ var a = "fbrf"
+ var b = 34654
+ var c = true
+
+ const 
+ let
+
+const add = (a,b) => { return a+b }
