@@ -15,6 +15,7 @@ class Header extends Component{
     inputChange(event){
         console.log(event.target.value)
         this.setState({search:event.target.value})
+        this.props.newsSearch(event.target.value)
     }
     render(){
         return(
@@ -25,7 +26,7 @@ class Header extends Component{
                 </div>
                 <center>
                     <input onChange={this.inputChange.bind(this)}/>
-                    <p>{this.state.search}</p>
+                    <p>{(this.state.search)?this.state.search:"Enter your text"}</p>
                 </center>
             </header>
         ) 
