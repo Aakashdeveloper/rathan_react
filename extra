@@ -40,3 +40,14 @@ function add(a,b){
  let
 
 const add = (a,b) => { return a+b }
+
+
+json-server
+
+sudo npm install -g json-server
+
+json-server --watch db.json --port 8900
+
+
+https://ngmovies.herokuapp.com/api/getMovies
+https://ngproductsparam.herokuapp.com/api/getProductDetails
