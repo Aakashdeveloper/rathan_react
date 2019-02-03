@@ -1,20 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route} from 'react-router-dom';
+import Routing from './routing';
 
-import Home from './components/Home';
-import Artist from './components/artist';
-
-const App = () => {
-    return(
-        <BrowserRouter>
-            <div>
-                <Route exact path="/" component={Home}/>
-                <Route path="/artist/:artistid" component={Artist}/>
-            </div>
-        </BrowserRouter>
-    )
-}
-
-ReactDOM.render(<App/>,document.getElementById('root'));
+ReactDOM.render(<Routing/>,document.getElementById('root'));
 
