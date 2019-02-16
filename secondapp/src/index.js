@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Link} from 'react-router-dom';
 import Profile from './components/Profile';
 import Posts from './components/Posts';
 import PostDetails from './components/post_detail';
+import Lifecycle from './components/Lifecycle';
 
 class App extends Component {
     render(){
@@ -42,6 +43,7 @@ ReactDOM.render(
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/posts">Posts</Link></li> 
                         <li><Link to="/profile">Profile</Link></li> 
+                        <li><Link to="/lifecycle">LifeCycle</Link></li> 
                     </ul>
                     </div>
                 </div>
@@ -51,6 +53,7 @@ ReactDOM.render(
             <Route exact path="/posts"  component={Posts}></Route>
             <Route path="/profile"  component={Profile}></Route>
             <Route path="/posts/:id"  component={PostDetails}></Route>
+            <Route path="/lifecycle"  component={Lifecycle}></Route>
         </div>
     </BrowserRouter>
     , document.getElementById('root'))
