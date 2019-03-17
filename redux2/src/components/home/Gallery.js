@@ -1,0 +1,42 @@
+import React from 'react';
+import { Link} from 'react-router-dom';
+import Slider from 'react-slick';
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+}
+
+const showGallery = ({gallerydata}) => {
+    if(gallerydata){
+        return(
+            <Slider {...settings}>
+                {gallerydata.map((item) => {
+                    return(
+                        <Link to={`/galleries/${item.id}`}
+                            key={item.id}
+                            className="slider-item">
+                                <div className="image"
+                                style={{background:`url(/images/galleries/${item.images[1].img})`}}>
+                                </div>
+                        </Link>
+                    )
+                })}
+            </Slider>
+        )
+    }
+}
+
+const Gallery = (props) => {
+    return(
+        <div className="home-gallery">
+            <h2>Awsome Gallery</h2>
+            {showGallery(props)}
+        </div>
+        
+    )
+}
+export default Gallery;

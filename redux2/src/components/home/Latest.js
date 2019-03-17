@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link} from 'react-router-dom'
 
-const showLatestNews = ({articleNews}) =>  {
-    if(articleNews){
-        return articleNews.map((data) => {
+const showLatestNews = ({latestdata}) =>  {
+    if(latestdata){
+        return latestdata.map((data,index) => {
             return(
-                <Link to="/" className="item">
+                <Link to={`/news/${data.id}`} className="item" key={index}>
                     <div className="image_cover"
                         style={{background:`url(/images/articles/${data.img}`}}>
                         <div className="description">
